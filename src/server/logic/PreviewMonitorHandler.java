@@ -35,4 +35,13 @@ public class PreviewMonitorHandler {
 	public static ArrayList<PreviewMonitor> getPreviewMonitors() {
 		return previewMonitors;
 	}
+
+    public static void setPreviewMonitors(ArrayList<PreviewMonitor> monitors) {
+        for (int i = 0; i < previewMonitors.size(); i++) {
+            if (i < monitors.size()) {
+                previewMonitors.get(i).setChannel(new Channel(monitors.get(i).getChannel()));
+                previewMonitors.get(i).update();
+            }
+        }
+    }
 }

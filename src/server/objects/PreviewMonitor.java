@@ -39,6 +39,28 @@ public class PreviewMonitor {
 		selected = false;
 	}
 
+    public PreviewMonitor(PreviewMonitor monitor) {
+        this.channel = new Channel(monitor.getChannel());
+
+        graphic = new JButton();
+        graphic.setForeground(monitor.getGraphic().getForeground());
+        graphic.setBackground(monitor.getGraphic().getBackground());
+        graphic.setFont(new Font(monitor.getGraphic().getFont().getName(), Font.BOLD, 26));
+        graphic.setText("" + channel.getNumber());
+        graphic.addActionListener(previewListener);
+        graphic.setBorder(new LineBorder(Color.WHITE, 1));
+        graphic.setBounds(incrementX*90+5, incrementY*90+5, 75, 75);
+
+        if (incrementX < 8) {
+            incrementX++;
+        } else {
+            incrementX = 0;
+            incrementY++;
+        }
+
+        selected = monitor.isSelected();
+    }
+
 	public void setSelected(boolean select) {
 		this.selected = select;
 

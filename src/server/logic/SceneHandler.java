@@ -4,7 +4,6 @@ import common.Utilities;
 import common.io.FileSaving;
 import common.io.FileSelector;
 import common.io.Serialization;
-import server.objects.Channel;
 import server.objects.PreviewMonitor;
 import server.objects.Scene;
 
@@ -69,15 +68,10 @@ public class SceneHandler {
 
 	private static ArrayList<PreviewMonitor> deepCopyChannelState() {
 		ArrayList<PreviewMonitor> newChannelState = new ArrayList<PreviewMonitor>();
-		newChannelState.addAll(PreviewMonitorHandler.getPreviewMonitors());
 
-		for (int i = 0; i < newChannelState.size(); i++) {
-			newChannelState.get(i).
-		}
-
-		for (PreviewMonitor previewMonitor : newChannelState) {
-			previewMonitor.setChannel(new Channel(previewMonitor.getChannel()));
-		}
+        for (PreviewMonitor monitor : PreviewMonitorHandler.getPreviewMonitors()) {
+            newChannelState.add(new PreviewMonitor(monitor));
+        }
 
 		return newChannelState;
 	}
