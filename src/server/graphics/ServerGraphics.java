@@ -138,6 +138,7 @@ public class ServerGraphics {
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
 				NetworkHandler.updateStatic(SceneHandler.getScenes().get(sceneList.getSelectedIndex()).getChannelState());
+                PreviewMonitorHandler.setPreviewMonitors(SceneHandler.getScenes().get(sceneList.getSelectedIndex()).getChannelState());
 			}
 		});
 	}
