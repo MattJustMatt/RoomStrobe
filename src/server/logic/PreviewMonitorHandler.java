@@ -39,7 +39,7 @@ public class PreviewMonitorHandler {
     public static void setPreviewMonitors(ArrayList<PreviewMonitor> monitors) {
         for (int i = 0; i < previewMonitors.size(); i++) {
             if (i < monitors.size()) {
-                previewMonitors.get(i).setChannel(new Channel(monitors.get(i).getChannel()));
+                previewMonitors.get(i).getChannel().setColor(monitors.get(i).getChannel().getColor());
                 previewMonitors.get(i).update();
             }
         }

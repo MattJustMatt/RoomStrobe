@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaf0bac7-8c89-42a6-a5f1-30f8bf275ee3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/objects/PreviewMonitor.java" afterPath="$PROJECT_DIR$/src/server/objects/PreviewMonitor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/logic/PreviewMonitorHandler.java" afterPath="$PROJECT_DIR$/src/server/logic/PreviewMonitorHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/logic/SceneHandler.java" afterPath="$PROJECT_DIR$/src/server/logic/SceneHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/graphics/ServerGraphics.java" afterPath="$PROJECT_DIR$/src/server/graphics/ServerGraphics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RoomStrobe.iws" />
@@ -77,10 +72,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PreviewMonitor.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PreviewMonitor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/objects/PreviewMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="5" selection-start="1825" selection-end="1825" vertical-scroll-proportion="0.84317344" vertical-offset="580" max-vertical-offset="1887">
+            <state line="57" column="25" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.0" vertical-offset="733" max-vertical-offset="1887">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2285#2286#0" expanded="true" />
@@ -122,10 +117,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PreviewMonitorHandler.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PreviewMonitorHandler.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/server/logic/PreviewMonitorHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="87" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="833">
+            <state line="35" column="31" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.6900369" vertical-offset="153" max-vertical-offset="833">
               <folding>
                 <element signature="e#1048#1049#0" expanded="true" />
                 <element signature="e#1077#1078#0" expanded="true" />
@@ -237,8 +232,8 @@
         <option value="$PROJECT_DIR$/src/server/logic/NetworkHandler.java" />
         <option value="$PROJECT_DIR$/src/server/objects/Universe.java" />
         <option value="$PROJECT_DIR$/src/server/graphics/ServerGraphics.java" />
-        <option value="$PROJECT_DIR$/src/server/logic/PreviewMonitorHandler.java" />
         <option value="$PROJECT_DIR$/src/server/logic/SceneHandler.java" />
+        <option value="$PROJECT_DIR$/src/server/logic/PreviewMonitorHandler.java" />
       </list>
     </option>
   </component>
@@ -811,6 +806,11 @@
       <created>1391972775347</created>
       <updated>1391972775347</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update preview monitor channels and refresh  swing display.">
+      <created>1392938976369</created>
+      <updated>1392938976369</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -875,6 +875,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Update preview monitor channels and refresh  swing display." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update preview monitor channels and refresh  swing display." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1216,12 +1218,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/logic/PreviewMonitorHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/server/objects/PreviewMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="87" selection-start="678" selection-end="678" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
+        <state line="57" column="25" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.0" vertical-offset="733" max-vertical-offset="1887">
           <folding>
-            <element signature="e#1048#1049#0" expanded="true" />
-            <element signature="e#1077#1078#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="e#2312#2313#0" expanded="true" />
+            <element signature="e#2344#2345#0" expanded="true" />
+            <element signature="e#2370#2371#0" expanded="true" />
+            <element signature="e#2402#2403#0" expanded="true" />
+            <element signature="e#2428#2429#0" expanded="true" />
+            <element signature="e#2472#2473#0" expanded="true" />
+            <element signature="e#2501#2502#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1238,19 +1247,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/objects/PreviewMonitor.java">
+    <entry file="file://$PROJECT_DIR$/src/server/logic/PreviewMonitorHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="5" selection-start="1825" selection-end="1825" vertical-scroll-proportion="0.84317344" vertical-offset="580" max-vertical-offset="1887">
+        <state line="35" column="31" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.6900369" vertical-offset="153" max-vertical-offset="833">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2285#2286#0" expanded="true" />
-            <element signature="e#2312#2313#0" expanded="true" />
-            <element signature="e#2344#2345#0" expanded="true" />
-            <element signature="e#2370#2371#0" expanded="true" />
-            <element signature="e#2402#2403#0" expanded="true" />
-            <element signature="e#2428#2429#0" expanded="true" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2501#2502#0" expanded="true" />
+            <element signature="e#1048#1049#0" expanded="true" />
+            <element signature="e#1077#1078#0" expanded="true" />
           </folding>
         </state>
       </provider>
