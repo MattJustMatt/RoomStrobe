@@ -18,18 +18,18 @@ public class SceneHandler {
 	}
 
 	public static void saveSceneFromCurrentState() {
-		Scene scene = new Scene(scenes.size()+1, 0.25, deepCopyChannelState());
+		Scene scene = new Scene(scenes.size()+1, 0.25, UniverseHandler.getActiveUniverse().getChannels());
 		scenes.add(scene);
 		System.out.println("Added new scene " + scene.getChannelState());
 	}
 
 	public static void cloneScene(int index) {
 		Scene sceneToClone = scenes.get(index);
-		scenes.add(new Scene(sceneToClone.getNumber(), sceneToClone.getTime(), deepCopyChannelState()));
+		scenes.add(new Scene(sceneToClone.getNumber(), sceneToClone.getTime(), sceneToClone.getChannelState()));
 	}
 
 	public static void updateScene(int index) {
-		scenes.get(index).setChannelState(deepCopyChannelState());
+		scenes.get(index).setChannelState(UniverseHandler.getActiveUniverse().getChannels());
 	}
 
 	public static void deleteScene(int index) {
@@ -64,16 +64,6 @@ public class SceneHandler {
 		} else {
 			JOptionPane.showMessageDialog(null, "Scenes failed to save! (Check console)", "ERROR", JOptionPane.ERROR_MESSAGE);
 		}
-	}
-
-	private static ArrayList<PreviewMonitor> deepCopyChannelState() {
-		ArrayList<PreviewMonitor> newChannelState = new ArrayList<PreviewMonitor>();
-
-        for (PreviewMonitor monitor : PreviewMonitorHandler.getPreviewMonitors()) {
-            newChannelState.add(new PreviewMonitor(monitor));
-        }
-
-		return newChannelState;
 	}
 
 	public static ArrayList<Scene> getScenes() {

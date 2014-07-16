@@ -1,5 +1,6 @@
 package server.logic;
 
+import server.MainServer;
 import server.objects.Scene;
 
 import java.io.File;
@@ -45,7 +46,7 @@ public class ShowHandler {
 		public void run() {
 			for (Scene scene : SceneHandler.getScenes()) {
 				if (isShowPlaying) {
-					NetworkHandler.updateStatic(scene.getChannelState());
+                    MainServer.getMulticastServer().broadcastState(scene.getChannelState());
 
 					try {
 						Thread.sleep((long) scene.getTime());

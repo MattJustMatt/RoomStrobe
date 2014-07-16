@@ -1,10 +1,13 @@
 package server.networking;
 
 import common.networking.MulticastConfig;
+import server.logic.UniverseHandler;
+import server.objects.Channel;
 
 import java.awt.*;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
+import java.util.ArrayList;
 
 public class MulticastServer {
 	private static boolean enabled = true;
@@ -35,13 +38,29 @@ public class MulticastServer {
 		}
 	}
 
-	public void sendColorToClient(int channel, Color color) {
-		sendPacketToClient(channel + "-" + color.getRed() + "-" + color.getGreen() + "-" + color.getBlue());
-	}
+    public void broadcastState() {
+        String packet = "";
 
-	public void sendColorToAllClients(Color color) {
-		sendPacketToClient("0-" + color.getRed() + "-" + color.getGreen() + "-" + color.getBlue());
-	}
+        for (Channel channel : UniverseHandler.getActiveUniverse().getChannels()) {
+            Color color = channel.getColor();
+
+            packet += channel.getNumber() + "-" + color.getRed() + "-" + color.getGreen() + "-" + color.getBlue() + ":";
+        }
+
+        sendPacketToClient(packet);
+    }
+
+    public void broadcastState(ArrayList<Channel> channelState) {
+        String packet = "";
+
+        for (Channel channel : channelState) {
+            Color color = channel.getColor();
+
+            packet += channel.getNumber() + "-" + color.getRed() + "-" + color.getGreen() + "-" + color.getBlue() + ":";
+        }
+
+        sendPacketToClient(packet);
+    }
 
 	public static boolean isEnabled() {
 		return enabled;

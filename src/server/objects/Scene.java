@@ -6,15 +6,16 @@ import java.util.ArrayList;
 public class Scene implements Serializable {
 	private int number;
 	private double time;
-	private ArrayList<PreviewMonitor> channelState;
+	private ArrayList<Channel> channelState;
 
-	public Scene(int number, double time, ArrayList<PreviewMonitor> channelState) {
+	public Scene(int number, double time, ArrayList<Channel> channels) {
 		this.number = number;
 		this.time = time;
 
 		//Freeze a snapshot of the channel state taken in.
-		this.channelState = new ArrayList<PreviewMonitor>(channelState.size());
-		this.channelState.addAll(channelState);
+		for (Channel channel : channels) {
+            this.channelState.add(new Channel(channel));
+        }
 	}
 
 	public int getNumber() {
@@ -29,11 +30,11 @@ public class Scene implements Serializable {
 		this.time = time;
 	}
 
-	public ArrayList<PreviewMonitor> getChannelState() {
+	public ArrayList<Channel> getChannelState() {
 		return this.channelState;
 	}
 
-	public void setChannelState(ArrayList<PreviewMonitor> channelState) {
+	public void setChannelState(ArrayList<Channel> channelState) {
 		this.channelState = channelState;
 	}
 

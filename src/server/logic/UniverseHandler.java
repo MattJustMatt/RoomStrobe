@@ -61,4 +61,13 @@ public class UniverseHandler {
 	public static Universe getActiveUniverse() {
 		return activeUniverse;
 	}
+
+    public static String report() {
+        String channelString = "";
+        for (Channel channel : getActiveUniverse().getChannels()) {
+            channelString += channel + "\n";
+        }
+
+        return "UNIVERSE:\n" + channelString;
+    }
 }
